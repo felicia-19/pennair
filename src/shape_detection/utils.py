@@ -14,6 +14,9 @@ def detect_shapes(mask, min_area=500):
     return shapes
 
 def draw_shapes(img, shapes):
-    for (cx, cy), contour in shapes:
+    for center, contour in shapes:
         cv2.drawContours(img, [contour], -1, (0, 0, 255), 2)
-        cv2.circle(img, (cx, cy), 5, (255, 0, 0), -1)
+        cv2.circle(img, center, 3, (255, 0, 0), -1)
+    return img
+
+
