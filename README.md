@@ -42,6 +42,7 @@ pennair_2024_shape_detection/
 ├── launch/
 │   └── shape_detection.launch.py  # ROS2 launch configuration
 ├── requirements.txt               # Python dependencies
+├── region_props_acceleration(area_and_centroid).ipynb  # gpu acceleration implementation of region props functions for area and centroid
 └── README.md
 ```
 
@@ -201,14 +202,14 @@ EPSILON_FACTOR = 0.02
 The JN called region_props_acceleration(area_and_centroid) contains a quick demo of a replica I worked on for region_props functions that would allow for GPU acceleration. Profiling of these custom functions against region_props shows faster completion time while keeping results similar in values to the region_props output. 
 
 #### Profiling of CPU-based method (region_props):
-Processing time: 4668.3832 seconds
-GPU Memory Used: 0.0 MB → 0.0 MB
-CPU Usage: 3.4% → 3.9%
-RAM Usage: 16274.54 MB → 16677.32 MB
+- Processing time: 4668.3832 seconds
+- GPU Memory Used: 0.0 MB → 0.0 MB
+- CPU Usage: 3.4% → 3.9%
+- RAM Usage: 16274.54 MB → 16677.32 MB
 
 #### Profiling of GPU-based method (torch):
-Processing time: 1078.3143 seconds
-GPU Memory Used: 0.0 MB → 201.0 MB
-CPU Usage: 3.3% → 3.7%
-RAM Usage: 15148.14 MB → 16086.41 MB
+- Processing time: 1078.3143 seconds
+- GPU Memory Used: 0.0 MB → 201.0 MB
+- CPU Usage: 3.3% → 3.7%
+- RAM Usage: 15148.14 MB → 16086.41 MB
 
