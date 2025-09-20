@@ -195,3 +195,20 @@ EPSILON_FACTOR = 0.02
 - **Shape Classification**: Area ratio and convexity analysis
 - **Center Detection**: Image moments (M10, M01, M00)
 - **3D Reconstruction**: Single-view metrology with geometric constraints
+
+## Additional Work 
+
+The JN called region_props_acceleration(area_and_centroid) contains a quick demo of a replica I worked on for region_props functions that would allow for GPU acceleration. Profiling of these custom functions against region_props shows faster completion time while keeping results similar in values to the region_props output. 
+
+#### Profiling of CPU-based method (region_props):
+Processing time: 4668.3832 seconds
+GPU Memory Used: 0.0 MB → 0.0 MB
+CPU Usage: 3.4% → 3.9%
+RAM Usage: 16274.54 MB → 16677.32 MB
+
+#### Profiling of GPU-based method (torch):
+Processing time: 1078.3143 seconds
+GPU Memory Used: 0.0 MB → 201.0 MB
+CPU Usage: 3.3% → 3.7%
+RAM Usage: 15148.14 MB → 16086.41 MB
+
