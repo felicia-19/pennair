@@ -20,7 +20,7 @@ A comprehensive computer vision system for detecting and analyzing geometric sha
 ## 📁 Project Structure
 
 ```
-pennair_2024_shape_detection/
+pennair_2025_shape_detection/
 ├── src/
 │   ├── scripts/
 │   │   ├── run_static.py          # Static image processing
@@ -143,16 +143,6 @@ ros2 launch pennair_2024_shape_detection shape_detection.launch.py
 *Robust detection across challenging backgrounds and lighting conditions*
 
 ![Background-Agnostic Demo](results/agnostic/processed_video_hard.mp4)
-
-### 3D Estimation Results
-
-| Shape | Center (X,Y,Z) | Orientation | Area | Confidence |
-|-------|----------------|-------------|------|------------|
-| Circle | (245, 180, 15.2) | N/A | 1250.8 | 0.94 |
-| Rectangle | (180, 120, 12.8) | 15.5° | 2100.4 | 0.91 |
-| Triangle | (320, 200, 18.1) | -22.3° | 980.2 | 0.89 |
-
-*See `results/3d/3d_results.csv` for complete analysis*
 
 ## 🔧 Configuration
 
