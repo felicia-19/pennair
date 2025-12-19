@@ -14,7 +14,6 @@ A comprehensive computer vision system for detecting and analyzing geometric sha
 - **Center Localization**: Geometric and mass center calculation
 - **Background Agnostic**: Robust detection across varying backgrounds
 - **3D Estimation**: Depth and pose estimation for detected shapes
-- **ROS2 Integration**: Real-time processing with ROS2 Humble support
 - **Occlusion Handling**: Basic support for partially occluded shapes
 
 ## 📁 Project Structure
@@ -68,13 +67,6 @@ pennair_2025_shape_detection/
    pip install -r requirements.txt
    ```
 
-3. **For ROS2 integration (optional):**
-   ```bash
-   # Ensure ROS2 Humble is installed
-   colcon build --packages-select pennair_2024_shape_detection
-   source install/setup.bash
-   ```
-
 ## 🎯 Usage
 
 ### Static Image Processing
@@ -118,14 +110,6 @@ python src/scripts/run_3d.py
 **Output:** 
 - `results/3d/processed_image.png` - Visualized 3D projections
 - `results/3d/3d_results.csv` - Detailed 3D measurements
-
-### ROS2 Integration
-
-Launch the complete ROS2 pipeline for real-time processing:
-
-```bash
-ros2 launch pennair_2024_shape_detection shape_detection.launch.py
-```
 
 ## 📊 Results & Examples
 
