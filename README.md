@@ -38,8 +38,6 @@ pennair_2025_shape_detection/
 │   └── 3d/                        # 3D estimation outputs
 ├── docs/
 │   └── approach.md                # Detailed methodology
-├── launch/
-│   └── shape_detection.launch.py  # ROS2 launch configuration
 ├── requirements.txt               # Python dependencies
 ├── region_props_acceleration(area_and_centroid).ipynb  # gpu acceleration implementation of region props functions for area and centroid
 └── README.md
